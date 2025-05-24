@@ -89,13 +89,16 @@
     </div>
 
     <!-- Visualization Card -->
-    <div class="bg-white/5 rounded-xl p-6 shadow-lg border border-purple-600/10 min-h-[570px]">
-      <div class="flex justify-between items-center mb-6">
+    <div class="bg-white/5 rounded-xl p-4 md:p-6 shadow-lg border border-purple-600/10">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
         <h2 class="text-xl font-semibold text-white">Revenue Analytics</h2>
         
         <!-- Filter Controls -->
-        <div class="flex space-x-2">
-          <select class="bg-[#081028] border border-purple-600/20 text-white rounded-lg px-3 py-2 text-sm">
+        <div class="flex flex-wrap gap-2 w-full sm:w-auto">
+          <select 
+            v-model="selectedCategory"
+            class="bg-[#081028] border border-purple-600/20 text-white rounded-lg px-3 py-2 text-sm flex-1 sm:flex-none"
+          >
             <option>All Categories</option>
             <option>Electronics</option>
             <option>Clothing</option>
@@ -103,29 +106,60 @@
             <option>Accessories</option>
           </select>
           
-          <select class="bg-[#081028] border border-purple-600/20 text-white rounded-lg px-3 py-2 text-sm">
-            <option>Daily</option>
-            <option>Weekly</option>
-            <option>Monthly</option>
-            <option>Annually</option>
+          <select 
+            v-model="selectedTimeFrame"
+            class="bg-[#081028] border border-purple-600/20 text-white rounded-lg px-3 py-2 text-sm flex-1 sm:flex-none"
+          >
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="annually">Annually</option>
           </select>
         </div>
       </div>
       
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         <!-- Main Chart Area -->
-        <div class="lg:col-span-2 bg-[#0a1535] rounded-lg p-4 h-[470px] flex items-center justify-center">
-          <p class="text-white/50 text-center">Revenue Trend Chart<br>(Visualization will be implemented here)</p>
+        <div class="md:col-span-2 bg-[#0a1535] rounded-lg p-3 md:p-4 h-[300px] sm:h-[350px] md:h-[400px] lg:h-[470px]">
+          <RevenueTrendChart 
+            :selected-time-frame="selectedTimeFrame"
+            :selected-category="selectedCategory"
+          />
         </div>
         
         <!-- Secondary Charts -->
         <div class="space-y-4">
-          <div class="bg-[#0a1535] rounded-lg p-4 h-[226px] flex items-center justify-center">
-            <p class="text-white/50 text-center">Product Categories<br>(Pie chart will be here)</p>
-          </div>
-          <div class="bg-[#0a1535] rounded-lg p-4 h-[226px] flex items-center justify-center">
-            <p class="text-white/50 text-center">Sales by Platform<br>(Bar chart will be here)</p>
-          </div>
+            <div class="bg-[#0a1535] rounded-lg p-3 md:p-4 h-[180px] sm:h-[170px] md:h-[190px] lg:h-[226px] relative">
+            <!-- Info Icon -->
+            <div class="absolute top-3 right-3 group cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16v-4m0-4h.01" />
+              </svg>
+              <div class="opacity-0 group-hover:opacity-100 transition bg-[#1a2240] text-white text-xs rounded px-2 py-1 absolute right-0 mt-1 z-10 whitespace-nowrap shadow-lg">
+              Category Distribution
+              </div>
+            </div>
+            <CategoryPieChart 
+              :selected-time-frame="selectedTimeFrame"
+            />
+            </div>
+            <div class="bg-[#0a1535] rounded-lg p-3 md:p-4 h-[180px] sm:h-[170px] md:h-[190px] lg:h-[226px] relative">
+            <!-- Info Icon -->
+            <div class="absolute top-3 right-3 group cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16v-4m0-4h.01" />
+              </svg>
+              <div class="opacity-0 group-hover:opacity-100 transition bg-[#1a2240] text-white text-xs rounded px-2 py-1 absolute right-0 mt-1 z-10 whitespace-nowrap shadow-lg">
+              Platform Revenue Comparison
+              </div>
+            </div>
+            <PlatformBarChart 
+              :selected-time-frame="selectedTimeFrame"
+              :selected-category="selectedCategory"
+            />
+            </div>
         </div>
       </div>
     </div>
@@ -133,11 +167,21 @@
 </template>
 
 <script>
+import RevenueTrendChart from './charts/RevenueTrendChart.vue';
+import CategoryPieChart from './charts/CategoryPieChart.vue';
+import PlatformBarChart from './charts/PlatformBarChart.vue';
+
 export default {
   name: 'RevenueAnalysis',
+  components: {
+    RevenueTrendChart,
+    CategoryPieChart,
+    PlatformBarChart
+  },
   data() {
     return {
-      // Data will be added when implementing actual functionality
+      selectedCategory: 'All Categories',
+      selectedTimeFrame: 'daily'
     }
   }
 }

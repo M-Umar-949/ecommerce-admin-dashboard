@@ -1,0 +1,332 @@
+{
+  "timeSeriesData": {
+    "daily": [
+      {
+        "date": "2025-05-17",
+        "total": 12453,
+        "categories": {
+          "Electronics": 5678,
+          "Clothing": 3421,
+          "Home Goods": 2198,
+          "Accessories": 1156
+        },
+        "platforms": {
+          "Website": 7432,
+          "Mobile App": 3876,
+          "Marketplace": 1145
+        }
+      },
+      {
+        "date": "2025-05-18",
+        "total": 11987,
+        "categories": {
+          "Electronics": 5321,
+          "Clothing": 3256,
+          "Home Goods": 2110,
+          "Accessories": 1300
+        },
+        "platforms": {
+          "Website": 6843,
+          "Mobile App": 3789,
+          "Marketplace": 1355
+        }
+      },
+      {
+        "date": "2025-05-19",
+        "total": 13546,
+        "categories": {
+          "Electronics": 6120,
+          "Clothing": 3682,
+          "Home Goods": 2387,
+          "Accessories": 1357
+        },
+        "platforms": {
+          "Website": 7890,
+          "Mobile App": 4210,
+          "Marketplace": 1446
+        }
+      },
+      {
+        "date": "2025-05-20",
+        "total": 14235,
+        "categories": {
+          "Electronics": 6521,
+          "Clothing": 3789,
+          "Home Goods": 2510,
+          "Accessories": 1415
+        },
+        "platforms": {
+          "Website": 8123,
+          "Mobile App": 4567,
+          "Marketplace": 1545
+        }
+      },
+      {
+        "date": "2025-05-21",
+        "total": 15324,
+        "categories": {
+          "Electronics": 7123,
+          "Clothing": 3945,
+          "Home Goods": 2756,
+          "Accessories": 1500
+        },
+        "platforms": {
+          "Website": 8765,
+          "Mobile App": 4932,
+          "Marketplace": 1627
+        }
+      },
+      {
+        "date": "2025-05-22",
+        "total": 14876,
+        "categories": {
+          "Electronics": 6872,
+          "Clothing": 3821,
+          "Home Goods": 2643,
+          "Accessories": 1540
+        },
+        "platforms": {
+          "Website": 8432,
+          "Mobile App": 4765,
+          "Marketplace": 1679
+        }
+      },
+      {
+        "date": "2025-05-23",
+        "total": 16254,
+        "categories": {
+          "Electronics": 7564,
+          "Clothing": 4132,
+          "Home Goods": 2876,
+          "Accessories": 1682
+        },
+        "platforms": {
+          "Website": 9321,
+          "Mobile App": 5126,
+          "Marketplace": 1807
+        }
+      }
+    ],
+    "weekly": [
+      {
+        "week": "Week 19",
+        "startDate": "2025-05-03",
+        "endDate": "2025-05-09",
+        "total": 78450,
+        "categories": {
+          "Electronics": 35210,
+          "Clothing": 21345,
+          "Home Goods": 13687,
+          "Accessories": 8208
+        },
+        "platforms": {
+          "Website": 45678,
+          "Mobile App": 23456,
+          "Marketplace": 9316
+        }
+      },
+      {
+        "week": "Week 20",
+        "startDate": "2025-05-10",
+        "endDate": "2025-05-16",
+        "total": 84320,
+        "categories": {
+          "Electronics": 38765,
+          "Clothing": 22876,
+          "Home Goods": 14325,
+          "Accessories": 8354
+        },
+        "platforms": {
+          "Website": 48765,
+          "Mobile App": 25432,
+          "Marketplace": 10123
+        }
+      },
+      {
+        "week": "Week 21",
+        "startDate": "2025-05-17",
+        "endDate": "2025-05-23",
+        "total": 98675,
+        "categories": {
+          "Electronics": 45320,
+          "Clothing": 26540,
+          "Home Goods": 16987,
+          "Accessories": 9828
+        },
+        "platforms": {
+          "Website": 56432,
+          "Mobile App": 30265,
+          "Marketplace": 11978
+        }
+      },
+      {
+        "week": "Week 22",
+        "startDate": "2025-05-24",
+        "endDate": "2025-05-30",
+        "total": 103421,
+        "categories": {
+          "Electronics": 47653,
+          "Clothing": 28132,
+          "Home Goods": 17865,
+          "Accessories": 9771
+        },
+        "platforms": {
+          "Website": 59876,
+          "Mobile App": 31654,
+          "Marketplace": 11891
+        }
+      }
+    ],
+    "monthly": [
+      {
+        "month": "January 2025",
+        "total": 352450,
+        "categories": {
+          "Electronics": 162345,
+          "Clothing": 94325,
+          "Home Goods": 59876,
+          "Accessories": 35904
+        },
+        "platforms": {
+          "Website": 203456,
+          "Mobile App": 104328,
+          "Marketplace": 44666
+        }
+      },
+      {
+        "month": "February 2025",
+        "total": 329870,
+        "categories": {
+          "Electronics": 152376,
+          "Clothing": 88432,
+          "Home Goods": 55432,
+          "Accessories": 33630
+        },
+        "platforms": {
+          "Website": 189654,
+          "Mobile App": 98765,
+          "Marketplace": 41451
+        }
+      },
+      {
+        "month": "March 2025",
+        "total": 376540,
+        "categories": {
+          "Electronics": 173654,
+          "Clothing": 100876,
+          "Home Goods": 63245,
+          "Accessories": 38765
+        },
+        "platforms": {
+          "Website": 217654,
+          "Mobile App": 113456,
+          "Marketplace": 45430
+        }
+      },
+      {
+        "month": "April 2025",
+        "total": 398760,
+        "categories": {
+          "Electronics": 184321,
+          "Clothing": 106543,
+          "Home Goods": 67543,
+          "Accessories": 40353
+        },
+        "platforms": {
+          "Website": 230987,
+          "Mobile App": 120654,
+          "Marketplace": 47119
+        }
+      },
+      {
+        "month": "May 2025",
+        "total": 415630,
+        "categories": {
+          "Electronics": 192345,
+          "Clothing": 111234,
+          "Home Goods": 70987,
+          "Accessories": 41064
+        },
+        "platforms": {
+          "Website": 240123,
+          "Mobile App": 125876,
+          "Marketplace": 49631
+        }
+      }
+    ],
+    "annually": [
+      {
+        "year": "2022",
+        "total": 3245870,
+        "categories": {
+          "Electronics": 1498760,
+          "Clothing": 876540,
+          "Home Goods": 548760,
+          "Accessories": 321810
+        },
+        "platforms": {
+          "Website": 1876540,
+          "Mobile App": 987650,
+          "Marketplace": 381680
+        }
+      },
+      {
+        "year": "2023",
+        "total": 3654320,
+        "categories": {
+          "Electronics": 1687650,
+          "Clothing": 987650,
+          "Home Goods": 618760,
+          "Accessories": 360260
+        },
+        "platforms": {
+          "Website": 2109876,
+          "Mobile App": 1123456,
+          "Marketplace": 420988
+        }
+      },
+      {
+        "year": "2024",
+        "total": 4123560,
+        "categories": {
+          "Electronics": 1908760,
+          "Clothing": 1109870,
+          "Home Goods": 698760,
+          "Accessories": 406170
+        },
+        "platforms": {
+          "Website": 2387650,
+          "Mobile App": 1287650,
+          "Marketplace": 448260
+        }
+      },
+      {
+        "year": "2025 (YTD)",
+        "total": 1873250,
+        "categories": {
+          "Electronics": 865430,
+          "Clothing": 504320,
+          "Home Goods": 317540,
+          "Accessories": 185960
+        },
+        "platforms": {
+          "Website": 1081874,
+          "Mobile App": 583079,
+          "Marketplace": 208297
+        }
+      }
+    ]
+  },
+  "categoryTotals": {
+    "Electronics": 445690,
+    "Clothing": 235780,
+    "Home Goods": 150890,
+    "Accessories": 90450
+  },
+  "platformTotals": {
+    "Website": 512340,
+    "Mobile App": 310870,
+    "Marketplace": 99600
+  }
+}
+
