@@ -40,15 +40,15 @@
             <!-- Product Info -->
             <td class="px-6 py-4 whitespace-nowrap">
               <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
-                <img
-                  v-if="product.image_url"
-                  src="product.image_url"
-                  @error="onImageError"
-                  alt="Product Image"
-                  class="w-10 h-10 rounded object-cover"
-                />
-                    <svg v-else class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
+                  <img
+                    v-if="product.image_url"
+                    :src="product.image_url"
+                    @error="onImageError"
+                    :alt="product.name"
+                    class="w-10 h-10 rounded object-cover"
+                  />
+                  <svg v-else class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
                   </svg>
                 </div>
@@ -166,8 +166,8 @@ export default {
     }
   },
   methods: {
-        onImageError(event) {
-      event.target.src = '/picture.jpg';
+    onImageError(event) {
+      event.target.src = 'products/1748172649761-377825293.png';
     },
 
     getStatusClasses(product) {

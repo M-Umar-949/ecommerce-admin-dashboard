@@ -127,7 +127,9 @@ export default {
   methods: {
     async loadInventoryData() {
       try {
-        const response = await fetch('/data/inventory.json')
+        const baseUrl = process.env.VUE_APP_PROD_URL || process.env.VUE_APP_LOCAL_URL
+        console.log('Loading inventory data from:', baseUrl)
+        const response = await fetch(`${baseUrl}/inventory`);
         const data = await response.json()
         this.products = data.products
       } catch (error) {

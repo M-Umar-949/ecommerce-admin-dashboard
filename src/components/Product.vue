@@ -1,13 +1,5 @@
 <template>
   <div class="min-h-screen bg-[#0a1535] text-white">
-    <!-- Header -->
-    <div class="bg-white/5 rounded-xl p-4 md:p-6 shadow-lg border border-purple-600/10">
-      <div class="flex items-center space-x-4">
-
-        <h1 class="text-2xl font-bold">Product Registration</h1>
-      </div>
-    </div>
-
     <div class="p-6">
       <!-- Success Message -->
       <SuccessMessage 
@@ -75,7 +67,6 @@ const handleProductSubmission = async (productData) => {
     localStorage.setItem('inventory', JSON.stringify(existingProducts))
 
     // Show success message
-    successMessage.value = `Product "${productData.name}" has been successfully registered!`
     showSuccess.value = true
 
     // Auto-hide success message after 5 seconds
