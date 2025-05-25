@@ -1,5 +1,8 @@
 module.exports = {
   transpileDependencies: [],
-  lintOnSave: false
+  lintOnSave: false,
+    devServer: {
+    port: 3000, 
+  }
 
 }

@@ -4,7 +4,9 @@ const cors = require('cors');
 const fs = require('fs').promises;
 const multer = require('multer');
 const app = express();
-const PORT = 5000;
+require('dotenv').config();
+
+const PORT = process.env.PORT || 5000;
 
 // Enable CORS for all origins
 app.use(cors());
