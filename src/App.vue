@@ -9,11 +9,8 @@
       <!-- Conditional rendering of components based on active tab -->
       <RevenueAnalysis v-if="activeTab === 0" />
       <InventoryManagement v-else-if="activeTab === 1" />
+      <ProductRegistration v-else-if="activeTab === 2" />
 
-      <div v-else-if="activeTab === 2" class="bg-white/5 rounded-lg p-4 md:p-8 text-white">
-        <h2 class="text-2xl font-semibold mb-4">{{ currentTabContent }}</h2>
-        <p class="text-white/80">Product Registration content will go here</p>
-      </div>
     </div>
   </div>
 </template>
@@ -22,13 +19,15 @@
 import SideBar from './components/SideBar.vue'
 import RevenueAnalysis from './components/Revenue.vue'
 import InventoryManagement from './components/Inventory.vue'
+import ProductRegistration from './components/Product.vue'  
 
 export default {
   name: 'App',
   components: {
     SideBar,
     RevenueAnalysis,
-    InventoryManagement
+    InventoryManagement,
+    ProductRegistration
   },
   data() {
     return {
