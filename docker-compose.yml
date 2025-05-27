@@ -1,3 +1,6 @@
+volumes:
+  shared-public:
+
 services:
   frontend:
     build:
@@ -10,6 +13,8 @@ services:
       VUE_APP_LOCAL_URL: http://51.20.80.177:5000
     depends_on:
       - backend
+    volumes:
+      - shared-public:/app/public
     restart: unless-stopped
 
   backend:
@@ -18,4 +23,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5000:5000"
+    volumes:
+      - shared-public:/app/frontend-public
     restart: unless-stopped

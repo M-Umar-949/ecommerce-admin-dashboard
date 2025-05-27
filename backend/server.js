@@ -17,13 +17,8 @@ app.use(express.json());
 // Configure multer for file uploads to Vue's public directory
 const storage = multer.diskStorage({
   destination: async (req, file, cb) => {
-    // Assuming Vue project is in a sibling directory or adjust path as needed
-    // Change this path to match your Vue project's public directory
-    const vuePublicPath = path.join(__dirname, '..', '.', 'public', 'products');
-    // Alternative paths you might need:
-    // const vuePublicPath = path.join(__dirname, 'public', 'products'); // if backend is in Vue project
-    // const vuePublicPath = path.join(__dirname, '..', 'public', 'products'); // if backend is sibling to Vue project
-    
+    const vuePublicPath = path.join(__dirname, 'frontend-public', 'products');
+
     try {
       await fs.mkdir(vuePublicPath, { recursive: true });
       cb(null, vuePublicPath);
@@ -32,7 +27,6 @@ const storage = multer.diskStorage({
     }
   },
   filename: (req, file, cb) => {
-    // Generate unique filename with timestamp
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
     const ext = path.extname(file.originalname);
     cb(null, uniqueSuffix + ext);
