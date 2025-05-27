@@ -337,7 +337,7 @@ import { ref, reactive } from 'vue'
 const props = defineProps({
   apiUrl: {
     type: String,
-    default: import.meta.env.VUE_APP_PROD_URL || 'http://localhost:5000'
+    default: process.env.VUE_APP_PROD_URL || process.env.VUE_APP_LOCAL_URL
   }
 })
 
