@@ -26,3 +26,4 @@ services:
     volumes:
       - shared-public:/app/frontend-public
     restart: unless-stopped
+    user: root
